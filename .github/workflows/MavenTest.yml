@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up JDK
@@ -18,11 +18,11 @@ jobs:
           distribution: temurin
           java-version: '22'
 
-      - name: Show directory structure
-        run: ls -R
+      - name: Show repo structure (debug)
+        run: find .
 
-      - name: Build project
+      - name: Build
         run: mvn -B clean package
 
-      - name: Run tests
+      - name: Test
         run: mvn -B test
