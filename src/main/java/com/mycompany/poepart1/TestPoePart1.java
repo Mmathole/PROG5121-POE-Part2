@@ -1,9 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
- */
 
-package TestClasses;
+
 import com.mycompany.poepart1.PoePart1;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -54,5 +50,3 @@ public class TestPoePart1 {
         assertEquals(false, actual,"Expect the phone number to be ivalid.");
     }
 }
-
- 

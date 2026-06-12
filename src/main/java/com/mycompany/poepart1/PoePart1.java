@@ -1,19 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 package com.mycompany.poepart1;
 
 import java.util.Scanner; 
 
 public class PoePart1 {
     //variables to storethe correct details when the user registers
- private static String correctUsername, correctPassword, correctPhoneNum;
+ private static String correctUsername, correctPassword;
  private static String name, surname;
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        registerUser(input); //to register the user
-        loginUser(input); //to log in the user
+        Scanner input;
+     input = new Scanner(System.in);
+         registerUser(input); //to register the user
+         loginUser(input); //to log in the user
         input.close();
     }
     
@@ -107,7 +105,6 @@ public class PoePart1 {
             System.out.println("Enter your cell phone number: ");
             phoneNum = input.nextLine();
             if (checkCellPhoneNumber(phoneNum)) {
-                correctPhoneNum = phoneNum;
                 System.out.println("Cell phone number successfully added.");
                 break;
             }
@@ -136,6 +133,9 @@ public class PoePart1 {
             
             if (username.equals(correctUsername) && password.equals(correctPassword)) {
             System.out.println("Welcome " + name + " , " + surname + " it is great to see you again. ");
+            
+             MessagesPoePart2.main(null);
+             
             return true;
         }
             else {
@@ -153,5 +153,4 @@ public class PoePart1 {
             return ("Username or password incorrect, please try again.");
         }
     }
- 
-}
+} 
